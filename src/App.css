@@ -3,8 +3,12 @@
     position: relative;
 }
 #site{
-    border: 10px solid yelow; 
+    /* border: 10px solid purple;  */
+    width: 1px;
+    height: 1px;
+
     position: absolute;
+ z-index: 10;
 }
 #spline{
     margin: 0;
@@ -12,5 +16,5 @@
     height: 100vh;
     /* border: 10px solid green;  */
     position: absolute;
-    z-index: -1;
+    z-index:1;
 }

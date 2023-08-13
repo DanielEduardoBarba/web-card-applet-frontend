@@ -4,15 +4,15 @@ export default function Header({user}) {
 
     return (
         <>
-            <header class="z-30 flex items-center w-full h-24 sm:h-32">
+            <header class="z-30 flex items-center w-screen h-24 sm:h-32">
                 <div class="container flex items-center justify-between px-6 mx-auto">
-                    <div class="text-3xl font-black text-gray-800  dark:text-white">
+                    <div class="text-3xl font-black text-white  dark:text-white">
                        <a href="/">ECview.ME</a> 
                     </div>
-                    <p class="text-xs">{user?.name}</p>
-                    <p class="text-xs">{user?.email}</p>
+                    <p class="text-xs text-white">{user?.name}</p>
+                    <p class="text-xs text-white">{user?.email}</p>
                     <div class="flex items-center">
-                        <nav class="items-center hidden text-lg text-gray-800 uppercase font-sen dark:text-white lg:flex">
+                        <nav class="items-center hidden text-lg text-white uppercase font-sen dark:text-white lg:flex">
                             <a href="/" class="flex px-6 py-2">
                                 Home
                             </a>

@@ -53,14 +53,14 @@ export default function Login({setUser}) {
     return (
         <>
 
-            <main class="relative h-full overflow-hidden bg-white dark:bg-gray-800">
+            <main class="relative w-screen h-screen bg-white ">
 
-                <div class="min-h-screen bg-blue-400 flex justify-center items-center">
+                <div id="background" class="min-h-screen flex justify-center items-center">
                     <div class="absolute w-60 h-60 rounded-xl bg-yellow-300 -top-5 -left-16 z-0 transform rotate-45 hidden md:block">
                     </div>
                     <div class="absolute w-48 h-48 rounded-xl bg-yellow-300 -bottom-6 -right-10 transform rotate-12 hidden md:block">
                     </div>
-                    <div class="py-12 px-12 bg-white rounded-2xl shadow-xl z-20">
+                    <div class="py-12 px-12 bg-white rounded-2xl shadow-2xl z-20">
                         <div>
                             <h1 class="text-3xl font-bold text-center mb-4 cursor-pointer">Log In</h1>
                             <p id="info" class="w-80 text-center text-sm mb-8 font-semibold text-gray-700 tracking-wide cursor-pointer">
