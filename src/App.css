@@ -1,0 +1,16 @@
+#main{
+    /* border: 5px dashed red;  */
+    position: relative;
+}
+#site{
+    border: 10px solid yelow; 
+    position: absolute;
+}
+#spline{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    /* border: 10px solid green;  */
+    position: absolute;
+    z-index: -1;
+}

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import { API_SERVER } from "../config.js"
 import { getUserObj } from "../scripts.js"
 import Card from "../components/Card.jsx"
-import Spline from '@splinetool/react-spline';
+
 
 
 export default function Ecard({ setHeader }) {
@@ -21,12 +21,14 @@ export default function Ecard({ setHeader }) {
                 console.log(data)
                 setHeader(0)
             })
-            .catch(console.error)
+            .catch(err=>{
+                window.location.href="/404"
+            })
 
     }, [])
     return (
         <>
-           <Spline scene="https://prod.spline.design/zQInmkeEljqqRvmB/scene.splinecode" />
+           
  
 
             <div class=" flex max-w-md overflow-hidden bg-white rounded-lg shadow-lg">

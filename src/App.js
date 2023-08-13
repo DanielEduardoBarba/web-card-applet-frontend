@@ -8,9 +8,11 @@ import Logout from './scenes/Logout'
 import About from './scenes/About'
 import Cards from "./scenes/Cards"
 import Ecard from "./scenes/Ecard"
-import './App.css'
+import Error404 from './scenes/Error404'
 import { getUserObj } from './scripts'
+import './App.css'
 
+import Spline from '@splinetool/react-spline';
 
 
 function App() {
@@ -30,6 +32,8 @@ useEffect(()=>{
 
     <>
 
+    <div id="main">
+      <div id="site">
 
       <Router>
             {header
@@ -39,6 +43,7 @@ useEffect(()=>{
         
           <Routes>
             <Route exact path='/' element={<Home user={user}/>}></Route>
+            <Route exact path='/404' element={<Error404/>}></Route>
             <Route exact path='/logout' element={<Logout/>}></Route>
             <Route exact path='/login' element={<LogIn setUser={setUser} />}></Route>
             <Route exact path='/signup' element={<Signup setUser={setUser}/>}></Route>
@@ -47,7 +52,13 @@ useEffect(()=>{
             <Route exact path='/ecard/:cid' element={<Ecard setHeader={setHeader}/>}></Route>
           </Routes>
       </Router>
+      </div>
 
+          <div id="spline">
+            <Spline scene="https://prod.spline.design/vIOA1HP-eG1SMWyB/scene.splinecode" />
+            </div>
+
+            </div>
     </>
   );
 }

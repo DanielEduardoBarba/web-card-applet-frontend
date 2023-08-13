@@ -7,7 +7,7 @@ export default function Header({user}) {
             <header class="z-30 flex items-center w-full h-24 sm:h-32">
                 <div class="container flex items-center justify-between px-6 mx-auto">
                     <div class="text-3xl font-black text-gray-800  dark:text-white">
-                       <a href="/">ECards.ME</a> 
+                       <a href="/">ECview.ME</a> 
                     </div>
                     <p class="text-xs">{user?.name}</p>
                     <p class="text-xs">{user?.email}</p>
