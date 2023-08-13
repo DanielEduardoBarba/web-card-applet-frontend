@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app"
 import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import { firebaseConfig } from "../config.js"
 import "./login.css"
+import { setUserObj } from "../scripts.js"
 
 
 export default function Signup({setUser}) {
@@ -52,7 +53,7 @@ export default function Signup({setUser}) {
         const auth = getAuth(app)
         createUserWithEmailAndPassword(auth, email, pass)
             .then((_user) => {
-                localStorage.setItem("web-card-user",JSON.stringify(_user.user) )
+                setUserObj(_user.user)
                 window.location.href = '/'
             })
             .catch(err=>{

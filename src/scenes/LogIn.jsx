@@ -2,7 +2,8 @@ import { initializeApp } from "firebase/app"
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 import { firebaseConfig } from "../config.js"
 import "./login.css"
-import { } from "react-router-dom"
+import { setUserObj } from "../scripts.js"
+
 
 export default function Login({setUser}) {
 
@@ -33,7 +34,7 @@ export default function Login({setUser}) {
         const auth = getAuth(app)
         signInWithEmailAndPassword(auth, email, pass)
             .then((_user) => {
-                localStorage.setItem("web-card-user",JSON.stringify(_user.user) )
+                setUserObj(_user.user)
                 window.location.href = '/'
             })
             .catch(err=>{
