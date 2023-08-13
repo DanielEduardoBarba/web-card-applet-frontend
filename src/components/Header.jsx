@@ -11,23 +11,25 @@ export default function Header({user}) {
                     <div class="text-3xl font-black text-gray-800 uppercase dark:text-white">
                         Watch.ME
                     </div>
+                    <p class="text-xs">{user?.name}</p>
+                    <p class="text-xs">{user?.email}</p>
                     <div class="flex items-center">
                         <nav class="items-center hidden text-lg text-gray-800 uppercase font-sen dark:text-white lg:flex">
                             <a href="/" class="flex px-6 py-2">
                                 Home
                             </a>
-                            <a href="#" class="flex px-6 py-2">
-                                Watch
+                            <a href="/about" class="flex px-6 py-2">
+                                About
                             </a>
-                            <a href="#" class="flex px-6 py-2">
-                                Product
-                            </a>
+                           
                             {
                             !user
                                 ?<a href="/signup" class="flex px-6 py-2">
                                     Sign Up
                                 </a>
-                                :<p class="text-xs">{user.email}</p>
+                                : <a href="/cards" class="flex px-6 py-2">
+                                    My Cards
+                                    </a>
                                 }
                             {
                             !user
