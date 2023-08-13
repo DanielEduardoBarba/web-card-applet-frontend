@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom"
 import { API_SERVER } from "../config.js"
 import { getUserObj } from "../scripts.js"
 import Card from "../components/Card.jsx"
+import Spline from '@splinetool/react-spline';
+
 
 export default function Ecard({ setHeader }) {
     const [ecard, setEcard] = useState([])
@@ -24,6 +26,8 @@ export default function Ecard({ setHeader }) {
     }, [])
     return (
         <>
+           <Spline scene="https://prod.spline.design/zQInmkeEljqqRvmB/scene.splinecode" />
+ 
 
             <div class=" flex max-w-md overflow-hidden bg-white rounded-lg shadow-lg">
                 <div class="w-1/3 bg-cover bg-landscape">
